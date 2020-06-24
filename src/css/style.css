@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5em;
+}
+
+.welcome {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.welcome h2 {
+  position: fixed;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 3em;
+}
+
+video {
+  max-width: calc(50% - 100px);
+  margin: 0 5em;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  border: 1px solid #ccc;
+}
