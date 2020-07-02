@@ -40,6 +40,7 @@ drone.on("open", (error) => {
     // If we are the second user to connect to the room we will be creating the offer
     const isOfferer = members.length === 2;
     startWebRTC(isOfferer);
+	startTimer();
   });
 });
 
@@ -129,4 +130,13 @@ function localDescCreated(desc) {
     () => sendMessage({ sdp: pc.localDescription }),
     onError
   );
+}
+
+function startTimer() {
+	var currentTime;
+	var timer = setInterval(function () {
+		let source = $("#localVideo");
+		currentTime = Math.round(source[0].currentTime);
+		console.log(currentTime);		
+	}, 1000);
 }
